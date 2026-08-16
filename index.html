@@ -15,11 +15,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --color-1:#0FF0FC;
-  --color-2:#FF00FF;
+  --color-1:#D4AF6A;
+  --color-2:#9C6B4E;
   --color-3:#1A1A1A;
-  --color-4:#00FFAA;
-  --color-5:#FF4500;
+  --color-4:#6E8F86;
+  --color-5:#A8543F;
   --color-6:#C0C0C0;
 
   --void:#07080c;
@@ -37,7 +37,7 @@
   --c4:var(--color-5);
   --c5:var(--color-6);
   --grad:linear-gradient(108deg,var(--color-1),var(--color-2) 34%,var(--color-4) 63%,var(--color-5));
-  --grad-soft:linear-gradient(108deg,rgba(15,240,252,.15),rgba(255,0,255,.13),rgba(0,255,170,.12),rgba(255,69,0,.10));
+  --grad-soft:linear-gradient(108deg,rgba(212,175,106,.15),rgba(156,107,78,.13),rgba(110,143,134,.12),rgba(168,84,63,.10));
   --maxw:1160px;
   --pad:30px;
 }
@@ -352,7 +352,7 @@ nav.scrolled{background:rgba(17,16,14,.72);backdrop-filter:blur(16px) saturate(1
   <svg viewBox="0 0 40 1000" preserveAspectRatio="none">
     <defs>
       <linearGradient id="spineGrad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#e4d7bb"/><stop offset="35%" stop-color="#0FF0FC"/>
+        <stop offset="0%" stop-color="#e4d7bb"/><stop offset="35%" stop-color="#D4AF6A"/>
         <stop offset="65%" stop-color="#8e8f73"/><stop offset="85%" stop-color="#6f765e"/><stop offset="100%" stop-color="#4c5140"/>
       </linearGradient>
     </defs>
@@ -653,7 +653,7 @@ if(matchMedia('(min-width:981px)').matches){
     });
     if(!repos.length){state&&(state.textContent='');}
   }catch(err){
-    if(state) state.innerHTML='Live repos are taking a breather (GitHub rate limit). <a href="http://github.com/niting21-GV" target="_blank" rel="noopener" style="color:#0FF0FC;text-decoration:underline">Browse them on GitHub ↗</a>';
+    if(state) state.innerHTML='Live repos are taking a breather (GitHub rate limit). <a href="http://github.com/niting21-GV" target="_blank" rel="noopener" style="color:#D4AF6A;text-decoration:underline">Browse them on GitHub ↗</a>';
   }
   function escapeHtml(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 })();
@@ -687,7 +687,7 @@ if(matchMedia('(min-width:981px)').matches){
     const cover=p.cover_image||p.cover_image_url||(p.images&&p.images[0]);
     const sub=p.subtitle||p.description||p.truncated_body_text||'';
     const a=document.createElement('a');a.className='post';a.href=url;a.target='_blank';a.rel='noopener';
-    a.innerHTML=`<div class="cover ${cover?'':'placeholder'}">${cover?`<img loading="lazy" src="${esc(cover)}" alt="">`:`<svg viewBox="0 0 24 24" fill="none" stroke="#0FF0FC" stroke-width="1.6"><path d="M22 3.6H2v2.7h20zM2 10v11l10-5.6L22 21V10z"/></svg>`}</div>
+    a.innerHTML=`<div class="cover ${cover?'':'placeholder'}">${cover?`<img loading="lazy" src="${esc(cover)}" alt="">`:`<svg viewBox="0 0 24 24" fill="none" stroke="#D4AF6A" stroke-width="1.6"><path d="M22 3.6H2v2.7h20zM2 10v11l10-5.6L22 21V10z"/></svg>`}</div>
       <div class="pbody"><span class="pdate">${d}</span><h4>${esc(p.title)}</h4><p>${esc(sub).slice(0,130)}${sub.length>130?'…':''}</p><span class="read">Read on Substack →</span></div>`;
     grid.appendChild(a);
   });
